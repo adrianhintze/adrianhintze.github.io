@@ -14,14 +14,11 @@
                     button.addEventListener('click', submitBazaarvoiceReview);
                 });
                 function submitBazaarvoiceReview () {
-                    var productId = 'product1';
+                    var productId = 'product2';
                     $BV.ui('rr', 'submit_review', {
                         productId: productId,
                         campaignId: 'TEST-CAMPAIGN',
-                        injecteddata: {
-                            IncentivizedReview: 'True'
-                        },
-                        injectedData: {
+                        injectedDataFromUrl: {
                             IncentivizedReview: 'True'
                         }
                     });
