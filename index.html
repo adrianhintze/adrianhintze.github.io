@@ -1,22 +1,23 @@
 <html>
     <head>
+        <script async src="https://apps.bazaarvoice.com/deployments/test-anchovy/main_site/staging/en_GB/bv.js"></script>
     </head>
     <body>
         
-        <script src="https://static.curations.bazaarvoice.com/gallery/lights-uk/stg/loader.js"></script>
-        <script type="text/javascript">
-            BVWidgets.display({
-
-            }, function () {
-                console.log('Working');
-            });
+        <button class="write-a-review-btn" type="button">
+            Write Review
+        </button>
+        <script>
+            (function () {
+                var reviewButtons = document.querySelectorAll('.write-a-review-btn');
+                reviewButtons.forEach(function (button) {
+                    button.addEventListener('click', submitBazaarvoiceReview);
+                });
+                function submitBazaarvoiceReview () {
+                    var productId = 'product1';
+                    $BV.ui('rr', 'submit_review', {productId: productId});
+                }
+            })();
         </script>
-        <div id="carousel-categorya"></div>
-        
-        <!--
-        <script src="https://katespade.ugc.bazaarvoice.com/static/5036-en_gb/bvapi.js"></script>
-        <script src="https://apps.bazaarvoice.com/deployments/katespadeuk/main_site/staging/en_GB/bv.js"></script>
-        <div data-bv-show="curations" data-bv-widget="bv-carousel" data-bv-display-tag="meta-pdp"></div>
-        -->
     </body>
 </html>
