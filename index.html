@@ -17,7 +17,10 @@
                     var productId = 'product1';
                     $BV.ui('rr', 'submit_review', {
                         productId: productId,
-                        campaignId: 'TEST'
+                        campaignId: 'TEST-CAMPAIGN',
+                        injectedData: {
+                            IncentivisedReview: 'True'
+                        }
                     });
                 }
             })();
