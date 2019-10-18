@@ -15,7 +15,10 @@
                 });
                 function submitBazaarvoiceReview () {
                     var productId = 'product1';
-                    $BV.ui('rr', 'submit_review', {productId: productId});
+                    $BV.ui('rr', 'submit_review', {
+                        productId: productId,
+                        campaignId: 'TEST'
+                    });
                 }
             })();
         </script>
