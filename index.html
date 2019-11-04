@@ -1,46 +1,9 @@
 <html>
     <head>
-        <script async src="https://apps.bazaarvoice.com/deployments/test-anchovy/main_site/staging/en_GB/bv.js"></script>
+        <script async src="https://apps.bazaarvoice.com/deployments/camper/main_site/staging/en_US/bv.js"></script>
     </head>
     <body>
-        
-        <button class="write-a-review-btn" type="button">
-            Write Review
-        </button>
-        <script>
-            (function () {
-                var reviewButtons = document.querySelectorAll('.write-a-review-btn');
-                reviewButtons.forEach(function (button) {
-                    button.addEventListener('click', submitBazaarvoiceReview);
-                });
-                function submitBazaarvoiceReview () {
-                    var productId = 'product2';
-                    $BV.ui('rr', 'submit_review', {
-                        productId: productId,
-                        campaignId: 'TEST-CAMPAIGN',
-                        injectedDataFromUrl: {
-                            IncentivizedReview: 'True'
-                        },
-                        injected: {
-                            formFields: {
-                                IncentivizedReview: 'True'
-                            } 
-                        },
-                        bvinjecteddata: {
-                            IncentivizedReview: 'True'
-                        },
-                        bvInjectedData: {
-                            IncentivizedReview: 'True'
-                        },
-                        injectedData: {
-                            IncentivizedReview: 'True'
-                        },
-                        injecteddata: {
-                            IncentivizedReview: 'True'
-                        },
-                    });
-                }
-            })();
-        </script>
+        <div data-bv-show="rating_summary" data-bv-product-id="17665-014"></div>
+        <div data-bv-show="reviews" data-bv-product-id="17665-014"></div>
     </body>
 </html>
