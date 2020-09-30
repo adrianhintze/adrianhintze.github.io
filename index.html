@@ -1,10 +1,29 @@
 <html>
     <head>
-        <script async src="https://apps.bazaarvoice.com/deployments/philipsglobal/crm_campaigns/staging/en_US/bv.js"></script>
+        <script async src="https://apps.bazaarvoice.com/deployments/ts-emea/main_site/staging/en_EU/bv.js"></script>
     </head>
     
     <body>
+        <!-- 
         <div data-bv-show="rating_summary" data-bv-product-id="SCF212_42"></div>
         <div data-bv-show="reviews" data-bv-product-id="SCF212_42"></div>
+        -->
+        <script>
+            window.bvCallback = function (BV) {
+                BV.pixel.trackTransaction({
+                    "currency" : "EUR",
+                    "orderId" : "1234",
+                    "total" : "20",
+                    "items" : [
+                      {
+                        "price" : "20",
+                        "quantity" : "1",
+                        "productId" : "product1"
+                    ],
+                    "email" : "adrian.hintze@bazaarvoice.com",
+                    "nickname" : "I love áccents"
+                });
+            };
+        </script>
     </body>
 </html>
